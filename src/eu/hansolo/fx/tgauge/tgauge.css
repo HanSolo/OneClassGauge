@@ -1,0 +1,58 @@
+.tgauge {
+    -needle-color       : rgb(221, 221, 221);
+    -frame-color        : rgb(31, 34, 35);
+    -background-gradient: linear-gradient(to bottom,
+                                          rgb(127, 126, 127) 0%,
+                                          rgb(27, 31, 31) 50%,
+                                          rgb(61, 63, 64) 100%);
+    -knob-gradient      : linear-gradient(from 50% 0% to 50% 100%,
+                                          rgb(34, 38, 38) 0%,
+                                          rgb(41, 44, 44) 100%);;
+    -text-color         : white;
+}
+
+.tgauge .frame {
+    -fx-background-color: -frame-color;
+    -fx-scale-shape     : true;
+    -fx-shape           : "M 0.0 200.0 C 0.0 90.0 90.0 0.0 200.0 0.0 C 310.0 0.0 400.0 90.0 400.0 200.0 C 400.0 310.0 310.0 400.0 200.0 400.0 C 90.0 400.0 0.0 310.0 0.0 200.0 Z";
+}
+
+.tgauge .background {
+    -fx-background-color: -background-gradient;
+    -fx-scale-shape     : true;
+    -fx-shape           : "M 9.0 200.0 C 9.0 95.0 95.0 9.0 200.0 9.0 C 305.0 9.0 391.0 95.0 391.0 200.0 C 391.0 305.0 305.0 391.0 200.0 391.0 C 95.0 391.0 9.0 305.0 9.0 200.0 Z";
+}
+
+.tgauge .sections {
+    -fx-background-color: linear-gradient(from 50% 0% to 50% 100%,
+                                          rgb(127, 126, 127) 0%,
+                                          rgb(27, 31, 31) 50%,
+                                          rgb(61, 63, 64) 100%);
+    -fx-scale-shape     : true;
+    -fx-shape           : "M 31.0 200.0 C 31.0 107.0 107.0 31.0 200.0 31.0 C 293.0 31.0 369.0 107.0 369.0 200.0 C 369.0 293.0 293.0 369.0 200.0 369.0 C 107.0 369.0 31.0 293.0 31.0 200.0 Z";
+}
+
+.tgauge .needle {
+    -fx-background-color: -needle-color;
+    -fx-scale-shape     : true;
+    -fx-shape           : "M 200.0 178.0 C 200.0 178.0 147.0 50.0 147.0 50.0 C 158.0 45.0 170.0 42.0 182.0 40.0 C 182.0 40.0 200.0 58.0 200.0 58.0 C 200.0 58.0 218.0 40.0 218.0 40.0 C 230.0 42.0 242.0 45.0 253.0 50.0 C 253.0 50.0 200.0 178.0 200.0 178.0 ZM 200.0 200.0 C 200.0 200.0 265.0 44.0 265.0 44.0 C 222.0 26.0 178.0 26.0 135.0 44.0 C 135.0 44.0 200.0 200.0 200.0 200.0 Z";
+    -fx-effect          : innershadow(gaussian, rgba(0, 0, 0, 0.65), 0%, 0.0, 0%, 0%);
+}
+
+.tgauge .knob {
+    -fx-background-color: -knob-gradient;
+    -fx-scale-shape     : true;
+    -fx-shape           : "M 141.0 197.0 C 141.0 165.0 167.0 138.0 200.0 138.0 C 233.0 138.0 259.0 165.0 259.0 197.0 C 259.0 230.0 233.0 256.0 200.0 256.0 C 167.0 256.0 141.0 230.0 141.0 197.0 Z";
+}
+
+.tgauge .unit {
+    -fx-fill: -text-color;
+}
+
+.tgauge .value {
+    -fx-fill: -text-color;
+}
+
+.tgauge .tick-label {
+    -fx-fill: -text-color;
+}
